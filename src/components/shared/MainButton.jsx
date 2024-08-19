@@ -3,15 +3,15 @@ import { Link } from "react-router-dom"
 
 
 
-const MainButton = ({ children, primary, isLink, linkTo, restClasses, loading, ...props }) => {
+const MainButton = ({ children, primary, isLink, linkTo, restClasses, loading, size, ...props }) => {
 
     return (
         <>
-            {isLink ? <Box component={Link} to={linkTo} className={`main-btn ${primary ? 'primary-btn' : 'secondary-btn'}`}  {...props} >
-                    {children}
+            {isLink ? <Box component={Link} to={linkTo} className={`main-btn ${size} ${primary ? 'primary-btn' : 'secondary-btn'}`}  {...props} >
+                {children}
             </Box>
                 :
-                <Box component='button' px={4} pb={.5} className={`main-btn ${primary ? 'primary-btn' : 'secondary-btn'}`} {...props}>
+                <Box component='button' px={4} pb={.5} className={`main-btn ${size}  ${primary ? 'primary-btn' : 'secondary-btn'}`} {...props}>
                     {children}
                 </Box>
             }

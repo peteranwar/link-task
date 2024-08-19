@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { QueryClientProvider } from 'react-query';
+import { useTranslation } from 'react-i18next';
+
 import Layout from './components/layout';
 import Home from './pages/Home';
 import './scss/style.scss';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-
 
 import ThemeConfig from "./theme/index"
-import { useTranslation } from 'react-i18next';
 import localStorageProvider from './localStorageProvider';
-import { QueryClientProvider } from 'react-query';
 import { queryClient } from "./libs/react-query";
 import HttpHelpers from './services/helpers';
 import News from './pages/News';
 
 HttpHelpers.setBaseUrl(process.env.REACT_APP_API_ENDPOINT);
 
-console.log('process.env.REACT_APP_API_ENDPOINT',process.env.REACT_APP_API_ENDPOINT)
+
 function App() {
   const { i18n } = useTranslation();
 

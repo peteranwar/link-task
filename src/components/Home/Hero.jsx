@@ -1,3 +1,4 @@
+import { useState } from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,19 +9,19 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
 
-// import required modules
+// import required modules for Swiper
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
+
+// Material Ui Components
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import MainButton from '../shared/MainButton';
-import { heroShapeIcon, topSlider, videoPlay } from '../../SVGs';
-import { Typography } from '@mui/material';
-import { useState, useLayoutEffect, useEffect } from 'react';
-import MainImage from '../shared/ImageMain';
+import Typography from '@mui/material/Typography';
 
-// import image1 from '../../../public/assets/images/Image-1.png'
+import MainButton from '../shared/MainButton';
+import MainImage from '../shared/ImageMain';
+import { heroShapeIcon, topSlider, videoPlay } from '../../SVGs';
+
 
 const Hero = ({ bannerData }) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -32,11 +33,12 @@ const Hero = ({ bannerData }) => {
 
   const colors = bannerData?.map(banner => banner.colorCode);
 
+  // Updated banner list with local images
   const bannerDataUpdated = bannerData?.map((banner, index) => ({
     ...banner,
     imgUrl: images[index]
   }))
-  console.log('bannerDatabannerData bannerDataUpdated', bannerDataUpdated)
+
 
   return (
     <Box display='flex' alignItems='center' className='hero-container'>
@@ -45,12 +47,12 @@ const Hero = ({ bannerData }) => {
           <Grid item xs={12}>
             <Swiper
               effect={'fade'}
-              // autoplay={{
-              //   delay: 3500,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
               speed={250}
-              modules={[ EffectFade, Pagination]} //Autoplay,
+              modules={[EffectFade, Pagination, Autoplay]} 
               className="mySwiper"
               pagination={{
                 clickable: true,
@@ -102,7 +104,7 @@ const Hero = ({ bannerData }) => {
                           </Grid>
 
                           {/* Slider Image */}
-                          <Grid item xs={12}  md={8} lg={5} sx={{ pt: 0 }}>
+                          <Grid item xs={12} md={8} lg={5} sx={{ pt: 0 }}>
                             <div className="slider-img">
                               <MainImage imgUrl={banner.imgUrl} alt={banner.title}
                                 width={'100%'}

@@ -96,10 +96,10 @@ mode === 'light'
         main: '#00B69B',
       },
       text: {
-        primary: '#130F26',
+        primary: '#080809',
         secondary: '#6B7280',
         price: '#2C6787',
-        light: '#686D77'
+        light: '#5E6282'
       },
       info: {
         main: '#0288d1',

@@ -3,20 +3,20 @@
 
 // Shared
 @mixin ease {
-    transition: all 0.3s ease;
-  }
-  
-  @mixin imageBackground($url) {
-    background-image: url(#{$url});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  transition: all 0.3s ease;
+}
 
-  @mixin crossBrowser($property, $val){
-    -webkit-#{$property}: $val;
-    -moz-#{$property}: $val;
-    -ms-#{$property}: $val;
-    -o-#{$property}: $val;
-    #{$property}: $val;
-  }
+@mixin imageBackground($url) {
+  background-image: url(#{$url});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin crossBrowser($property, $val) {
+  -webkit-#{$property}: $val;
+  -moz-#{$property}: $val;
+  -ms-#{$property}: $val;
+  -o-#{$property}: $val;
+  #{$property}: $val;
+}

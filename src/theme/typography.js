@@ -46,14 +46,14 @@ export const typography = {
   h4: {
     fontWeight: 600,
     lineHeight: 1.5,
-    fontSize: pxToRem(24),
-    ...responsiveFontSizes({ xs: 14, md: 20, lg: 24 }),
+    fontSize: pxToRem(20),
+    ...responsiveFontSizes({ xs: 18, md: 19, lg: 20 }),
   },
   h5: {
     fontWeight: 600,
     lineHeight: 1.5,
     fontSize: pxToRem(18),
-    ...responsiveFontSizes({ xs: 12, md: 16, lg: 16 }),
+    ...responsiveFontSizes({ xs: 16, md: 17, lg: 18 }),
   },
   h6: {
     fontWeight: 500,
@@ -62,16 +62,16 @@ export const typography = {
     ...responsiveFontSizes({ xs: 12, md: 14, lg: 16 }),
   },
   subtitle1: {
-    fontWeight: 400,
+    fontWeight: 500,
     lineHeight: 1.5,
-    fontSize: pxToRem(18),
-    ...responsiveFontSizes({ xs: 11, sm: 12, md: 14, lg: 18 }),
+    fontSize: pxToRem(21),
+    ...responsiveFontSizes({ xs: 1, sm: 18, md: 19, lg: 20, xl:21 }),
   },
   subtitle2: {
-    fontWeight: 400,
+    fontWeight: 500,
     lineHeight: 22 / 14,
-    fontSize: pxToRem(12),
-    ...responsiveFontSizes({ xs: 10, sm: 11, md: 11, lg: 12 }),
+    fontSize: pxToRem(13),
+    ...responsiveFontSizes({ xs: 10, sm: 11, md: 12, lg: 13, xl:14 }),
   },
   body1: {
     // lineHeight: '21px',

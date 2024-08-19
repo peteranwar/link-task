@@ -18,6 +18,9 @@
     text-transform: capitalize;
     box-shadow: 0 20px 70px rgba(241, 165, 1, 0.15);
 
+    &.large {
+        font-size: 18px;
+    }
     &[disabled] {
         opacity: 0.3;
         cursor: not-allowed;

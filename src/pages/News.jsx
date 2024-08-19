@@ -13,7 +13,6 @@ const News = () => {
       },
     }
   );
-  console.log('newsCategories')
 
   return (
     <div>News</div>

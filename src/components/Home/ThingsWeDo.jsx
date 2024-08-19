@@ -1,6 +1,9 @@
-import Box from "@mui/material/Box"
+import { Link } from "react-router-dom";
+
+import Box from "@mui/material/Box";
+
 import MainImage from "../shared/ImageMain"
-import { Typography } from "@mui/material"
+import { arrowRight } from "../../SVGs"
 
 const CARDS_DATA = [
     {
@@ -30,10 +33,12 @@ const CARDS_DATA = [
         image: '/assets/images/service-5.png'
     },
 
-]
+];
+
+
 const ThingsWeDo = () => {
     return (
-        <Box className="things-wed-do_container" py={{ xs: 8,md:10, lg: 14 }}>
+        <Box className="things-wed-do_container" py={{ xs: 8, md: 10, lg: 14 }}>
             {/* header background */}
             <h3 className="header-background fw-bold">
                 Things
@@ -50,10 +55,17 @@ const ThingsWeDo = () => {
                             <h6 className="we-deliver_card-text fw-bold">
                                 {card.text}
                             </h6>
+                            {/* Read More */}
+                            <Box component={Link} to='/' className='read-more_btn cursor-pointer' display='flex' alignItems='center' gap={1} color='common.white'>
+                                {arrowRight}
+                                <span className="text">
+                                    Read more
+                                </span>
+                            </Box>
                         </Box>
                     ))}
                 </Box>
-                <Box className='we-deliver_content' py={{ xs: 6, lg: 8 }} px={{ xs: 2,sm:3,md:4, lg: 5 }}>
+                <Box className='we-deliver_content' py={{ xs: 6, lg: 8 }} px={{ xs: 2, sm: 3, md: 4, lg: 5 }}>
                     <Box component='h5' className="we-deliver_title fw-bold" mb={{ xs: 3, md: 5 }}>
                         We Deliver <br />
                         Digital Productivity

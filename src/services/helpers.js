@@ -12,7 +12,7 @@ class HttpHelpers {
     this.authenticatedAxios = axios.create({ baseURL: this.apiBaseUrl });
     this.unAuthenticatedAxios = axios.create({ baseURL: this.apiBaseUrl });
     this.addAuthenticationInterceptor();
-    this.addUnauthenticationInterceptor();
+    this.addUnAuthenticationInterceptor();
   }
 
   getToken() {
@@ -51,7 +51,7 @@ class HttpHelpers {
     );
   }
 
-  addUnauthenticationInterceptor() {
+  addUnAuthenticationInterceptor() {
     this.unAuthenticatedAxios.interceptors.request.use(
       async (config) => {
         const locale = await this.getLocale();

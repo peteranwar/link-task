@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-
 //  Material Ui Components
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -21,7 +20,6 @@ import MobileHeader from './MobileHeader';
 
 
 import localStorageProvider from '../../../localStorageProvider';
-
 
 const drawerWidth = '100%';
 

@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import Hero from "../components/Home/Hero";
 import { useQuery } from "react-query";
+
+import Hero from "../components/Home/Hero";
 import HomeApiEndpoints from "../services/home.api";
 import ThingsWeDo from "../components/Home/ThingsWeDo";
-import NewsApiEndpoints from "../services/news.api";
+
 import News from "../components/Home/News";
 
 const Home = () => {
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Sec */}
-      {bannerData?.length > 0 && <Hero {...{ bannerData }} />}
+      {<Hero {...{ bannerData }} />}
 
 
       {/* Things We Do */}

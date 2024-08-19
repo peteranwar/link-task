@@ -9,8 +9,6 @@ const NewsApiEndpoints = {
     return HttpHelpers.unAuthenticatedAxios.get('d275425a434e02acf2f7').then(response => response.data);
   },
 
-
-
 };
 
 export default NewsApiEndpoints;
