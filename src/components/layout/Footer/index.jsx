@@ -229,28 +229,29 @@ const Footer = () => {
             </Typography>
 
             <Box display='flex' alignItems='center' gap={1}>
-              <MainImage name='Google Play.png' alt='Google Play'
-                sx={{
-                  width: '107px',
-                  height: '35px',
-                  objectFit: 'contain',
-                }}
-              />
-
-              <MainImage name='Play Store.png' alt='Play Store'
-                sx={{
-                  width: '107px',
-                  height: '35px',
-                  objectFit: 'contain',
-                }}
-              />
+              <a href="" target="_blank" aria-label="Google Pla">
+                <MainImage name='Google Play.png' alt='Google Play'
+                  sx={{
+                    width: '107px',
+                    height: '35px',
+                    objectFit: 'contain',
+                  }}
+                />
+              </a>
+              <a href="" target="_blank" aria-label="Google Pla">
+                <MainImage name='Play Store.png' alt='Play Store'
+                  sx={{
+                    width: '107px',
+                    height: '35px',
+                    objectFit: 'contain',
+                  }}
+                />
+              </a>
             </Box>
-
           </Grid>
 
-
           {/* Footer Bottom */}
-          <Grid item xs={12} mb={{xs:3, md:4.75}}>
+          <Grid item xs={12} mb={{ xs: 3, md: 4.75 }}>
             <Typography textAlign='center' variant="body1" color='text.light'>
               All rights reserved@Linkdevelopment.com
             </Typography>
